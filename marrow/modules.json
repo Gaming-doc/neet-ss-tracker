@@ -1,0 +1,1064 @@
+[
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Valvular Heart Diseases",
+"q": 25
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "STE-ACS",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "NSTE-ACS",
+"q": 11
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Chronic Coronary Syndrome",
+"q": 22
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "PCI",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Evaluation in Cardiology",
+"q": 25
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Heart Failure Pathophysiology/Diagnosis",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Heart Failure Treatment",
+"q": 8
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Amyloidosis & Cardiomyopathy",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Dilated Cardiomyopathy",
+"q": 15
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Systemic Hypertension",
+"q": 20
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Pericardial Diseases",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Special Topics in Cardiology",
+"q": 21
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Atrial Fibrillation",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Ventricular Tachycardia",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Bradyarrhythmia",
+"q": 15
+},
+{
+"sec": "must",
+"subj": "Cardiology",
+"name": "Approach to Ventricular Arrhythmia",
+"q": 11
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Glomerular Diseases",
+"q": 37
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Acute Kidney Injury",
+"q": 28
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Chronic Kidney Disease",
+"q": 31
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Dialysis",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Tubulointerstitial Diseases",
+"q": 21
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Polycystic Kidney Disease & Inherited Tubule Disorders",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Renal Transplantation",
+"q": 16
+},
+{
+"sec": "must",
+"subj": "Nephrology",
+"name": "Nephrolithiasis",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Disorders of Adrenal Cortex",
+"q": 34
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Adrenal Adenomas/Carcinomas/Incidentalomas",
+"q": 16
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Pheochromocytoma",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Diabetes Mellitus",
+"q": 26
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Anterior Pituitary",
+"q": 22
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Posterior Pituitary",
+"q": 7
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Pituitary Tumor Syndromes",
+"q": 6
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Thyroid Physiology & Testing",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Hypothyroidism",
+"q": 11
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Hyperthyroidism",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Thyroid Nodules & Cancer",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Parathyroids & Bone-Mineral Metabolism",
+"q": 28
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Osteoporosis & Dysplasias of Bone",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "MEN Syndromes",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Autoimmune Polyendocrine Syndromes",
+"q": 12
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Disorders of Sexual Development",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Disorders of Testes & Male Reproductive System",
+"q": 15
+},
+{
+"sec": "must",
+"subj": "Endocrinology",
+"name": "Disorders of the Female Reproductive System",
+"q": 19
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Ischemic CVA",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Hemorrhagic CVA",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Delirium/Dementia/Intelligence/Memory",
+"q": 26
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Parkinson's Disease",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Degenerative Diseases",
+"q": 22
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Demyelinating Disorders",
+"q": 11
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Epilepsy",
+"q": 29
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Headache",
+"q": 23
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Neuro-infections",
+"q": 9
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Neurology of Nutrition and Toxicology",
+"q": 11
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Muscle Disorders",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Neuromuscular Junction & Other Muscle Disorders",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Peripheral Nerve Disorders",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "Spinal Cord",
+"q": 21
+},
+{
+"sec": "must",
+"subj": "Neurology",
+"name": "ALS & MND",
+"q": 16
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Liver",
+"q": 54
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Pancreas",
+"q": 15
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Small Intestines",
+"q": 19
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "IBD",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Nutrition and Gastroenterology",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Stomach",
+"q": 25
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Esophagus",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Gastro/Hepatology",
+"name": "Gallbladder and Biliary Disorders",
+"q": 23
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "Vasculitis Syndromes",
+"q": 56
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "SLE & APS",
+"q": 51
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "RA Pathogenesis & Clinical Features",
+"q": 30
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "RA Investigations & Treatment",
+"q": 36
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "Spondyloarthritides Core Concepts",
+"q": 8
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "SpA Individual Disorders",
+"q": 40
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "SpA Diagnosis & Management",
+"q": 37
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "Systemic Sclerosis",
+"q": 12
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "Myositis and Relapsing Polychondritis",
+"q": 35
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "Crystal Arthropathies",
+"q": 57
+},
+{
+"sec": "must",
+"subj": "Rheumatology",
+"name": "Sarcoidosis/IgG4/FMF",
+"q": 19
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "HIV/AIDS",
+"q": 31
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Tuberculosis, Leprosy & Mycobacteria",
+"q": 35
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Viral Infections I",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Fungal Infections I",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Fungal Infections II",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Bacterial Infections I",
+"q": 22
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Bacterial Infections II",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Bacterial Infections III",
+"q": 15
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Antibiotic Prophylaxis & Resistance",
+"q": 11
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Approach, Presentations and Sepsis",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Parasitic Infections",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Infectious Diseases",
+"name": "Principles of Virology and Antivirals",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Hypoproliferative Anemias",
+"q": 21
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Megaloblastic Anemias",
+"q": 16
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Disorders of Hemoglobin",
+"q": 7
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Disorders of Erythroid Cells",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Disorders of Hemostasis",
+"q": 20
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Disorders of Megakaryocytes",
+"q": 14
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Bone Marrow Failure & Myeloproliferative Neoplasms",
+"q": 17
+},
+{
+"sec": "must",
+"subj": "Haematology",
+"name": "Hemochromatosis",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Toxicology: Beta Blockers, CCBs & Cardiac Glycosides",
+"q": 15
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "TCA Toxicity",
+"q": 4
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Salicylate & Paracetamol",
+"q": 7
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Alcohol & Glycol",
+"q": 6
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "CO/OP/Cholinergics/Heavy Metals",
+"q": 18
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Opioid/Anticonvulsant/Sedative-Hypnotics",
+"q": 13
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Envenomations",
+"q": 8
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Heat Related Illness",
+"q": 6
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "Hypothermia & Frostbite",
+"q": 10
+},
+{
+"sec": "must",
+"subj": "Other topics",
+"name": "High Altitude Illness",
+"q": 10
+},
+{
+"sec": "next",
+"subj": "Nephrology",
+"name": "Basics of Nephrology",
+"q": 19
+},
+{
+"sec": "next",
+"subj": "Nephrology",
+"name": "Vascular Injury to the Kidney",
+"q": 15
+},
+{
+"sec": "next",
+"subj": "Nephrology",
+"name": "Urinary Tract Obstruction",
+"q": 5
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Congenital Heart Disease",
+"q": 6
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Cardiopulmonary Disease",
+"q": 11
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Pulmonary Hypertension",
+"q": 17
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Aortic Syndrome",
+"q": 15
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Arterial Diseases of the Extremities",
+"q": 19
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Acute & Chronic Myocarditis",
+"q": 10
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "PSVT",
+"q": 8
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Atrial Flutter & MAT",
+"q": 5
+},
+{
+"sec": "next",
+"subj": "Cardiology",
+"name": "Approach to Supraventricular Arrhythmia",
+"q": 8
+},
+{
+"sec": "next",
+"subj": "Endocrinology",
+"name": "Mechanisms of Hormone Action",
+"q": 9
+},
+{
+"sec": "next",
+"subj": "Endocrinology",
+"name": "Disorders of Lipoprotein Metabolism",
+"q": 7
+},
+{
+"sec": "next",
+"subj": "Endocrinology",
+"name": "Obesity",
+"q": 22
+},
+{
+"sec": "next",
+"subj": "Genetics and metabolism",
+"name": "Principles of Human Genetics",
+"q": 37
+},
+{
+"sec": "next",
+"subj": "Genetics and metabolism",
+"name": "Storage Disorders",
+"q": 14
+},
+{
+"sec": "next",
+"subj": "Genetics and metabolism",
+"name": "Amino Acid Metabolism Disorders",
+"q": 17
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Speech and Language",
+"q": 15
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Sleep and Its Disorders",
+"q": 10
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Cranial Nerves",
+"q": 17
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Consciousness",
+"q": 10
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Neurodevelopment and Aging",
+"q": 10
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Metabolic Diseases of Nervous System",
+"q": 9
+},
+{
+"sec": "next",
+"subj": "Neurology",
+"name": "Developmental Diseases",
+"q": 9
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "Immunization, Vaccine & Travel Medicine",
+"q": 7
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "Intraabdominal and GI Infections",
+"q": 16
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "Infective Endocarditis",
+"q": 14
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "STIs",
+"q": 15
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "UTI/Pyelonephritis/Prostatitis",
+"q": 15
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "Encephalitis, Meningitis & Brain Abscess",
+"q": 16
+},
+{
+"sec": "next",
+"subj": "Infectious Diseases",
+"name": "Pneumonia & Lung Abscess",
+"q": 24
+},
+{
+"sec": "next",
+"subj": "Rheumatology and immunology",
+"name": "Primary Immune Deficiencies",
+"q": 9
+},
+{
+"sec": "next",
+"subj": "Rheumatology and immunology",
+"name": "Introduction to the Immune System",
+"q": 28
+},
+{
+"sec": "next",
+"subj": "Rheumatology and immunology",
+"name": "Basics of Rheumatology",
+"q": 17
+},
+{
+"sec": "next",
+"subj": "Rheumatology and immunology",
+"name": "Sj\u00f6gren's Syndrome",
+"q": 47
+},
+{
+"sec": "next",
+"subj": "Rheumatology and immunology",
+"name": "Acute Rheumatic Fever",
+"q": 47
+},
+{
+"sec": "next",
+"subj": "Haematology",
+"name": "Plasma Cell Disorders and Amyloidosis",
+"q": 20
+},
+{
+"sec": "next",
+"subj": "Haematology",
+"name": "PNH",
+"q": 13
+},
+{
+"sec": "next",
+"subj": "Haematology",
+"name": "The Porphyrias",
+"q": 11
+},
+{
+"sec": "next",
+"subj": "Haematology",
+"name": "Blood Transfusions & Reactions",
+"q": 13
+},
+{
+"sec": "next",
+"subj": "Haematology",
+"name": "Transfusion Biology and Stem Cells",
+"q": 14
+},
+{
+"sec": "next",
+"subj": "Statistics",
+"name": "Statistics",
+"q": 70
+},
+{
+"sec": "omit",
+"subj": "Cardiology",
+"name": "Cardiac Transplant",
+"q": 13
+},
+{
+"sec": "omit",
+"subj": "Cardiology",
+"name": "Renovascular Disease",
+"q": 5
+},
+{
+"sec": "omit",
+"subj": "Cardiology",
+"name": "Pulmonary Hypertension module",
+"q": 13
+},
+{
+"sec": "omit",
+"subj": "Cardiology",
+"name": "Fundamentals of Cardiology",
+"q": 8
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Neuropsychiatry",
+"q": 9
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Energy/Mood/Autonomic/Endocrine Disorders",
+"q": 10
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Disturbances of Cerebrospinal Fluid",
+"q": 10
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Clinical Method of Neurology",
+"q": 11
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Disorders of Motility",
+"q": 12
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Disorders of Special Senses",
+"q": 15
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Intracranial Neoplasms & Paraneoplastic Disorders",
+"q": 13
+},
+{
+"sec": "omit",
+"subj": "Neurology",
+"name": "Craniocerebral Trauma",
+"q": 11
+},
+{
+"sec": "omit",
+"subj": "Gastro",
+"name": "Principles of Gastroenterology",
+"q": 15
+},
+{
+"sec": "omit",
+"subj": "Gastro",
+"name": "Specific GI Conditions",
+"q": 17
+},
+{
+"sec": "omit",
+"subj": "Gastro",
+"name": "Modalities in Gastroenterology",
+"q": 9
+},
+{
+"sec": "omit",
+"subj": "Gastro",
+"name": "Colon",
+"q": 18
+},
+{
+"sec": "omit",
+"subj": "Rheumatology and others",
+"name": "Purine and Pyrimidine Metabolism",
+"q": 6
+},
+{
+"sec": "omit",
+"subj": "Rheumatology and others",
+"name": "Geriatrics & Old Age Medicine",
+"q": 22
+},
+{
+"sec": "omit",
+"subj": "Rheumatology and others",
+"name": "Connective Tissue Diseases",
+"q": 20
+},
+{
+"sec": "omit",
+"subj": "Rheumatology and others",
+"name": "Osteoarthritis",
+"q": 32
+},
+{
+"sec": "omit",
+"subj": "Rheumatology and others",
+"name": "Other Arthritides and Periarticular Disorders",
+"q": 21
+},
+{
+"sec": "omit",
+"subj": "Leukaemia and lymphoma",
+"name": "Acute Myeloid Leukemia",
+"q": 34
+},
+{
+"sec": "omit",
+"subj": "Leukaemia and lymphoma",
+"name": "Acute Promyelocytic Leukemia",
+"q": 13
+},
+{
+"sec": "omit",
+"subj": "Leukaemia and lymphoma",
+"name": "Myelodysplastic Neoplasm",
+"q": 19
+},
+{
+"sec": "omit",
+"subj": "Leukaemia and lymphoma",
+"name": "Malignancies of Lymphoid Cells",
+"q": 39
+},
+{
+"sec": "omit",
+"subj": "Leukaemia and lymphoma",
+"name": "Disorders of Myeloid Cells",
+"q": 12
+},
+{
+"sec": "omit",
+"subj": "Leukaemia and lymphoma",
+"name": "Miscellaneous Plasma Cell Disorders",
+"q": 11
+}
+]

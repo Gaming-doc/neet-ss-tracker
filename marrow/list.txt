@@ -1,0 +1,33 @@
+Here is the same split with each module's MCQ count in brackets. Counts come from the page you had open.
+
+**Must complete**
+
+- **Cardiology:** Valvular Heart Diseases (25), STE-ACS (18), NSTE-ACS (11), Chronic Coronary Syndrome (22), PCI (10), Evaluation in Cardiology (25), Heart Failure Pathophysiology/Diagnosis (14), Heart Failure Treatment (8), Amyloidosis & Cardiomyopathy (14), Dilated Cardiomyopathy (15), Systemic Hypertension (20), Pericardial Diseases (14), Special Topics in Cardiology (21), Atrial Fibrillation (10), Ventricular Tachycardia (17), Bradyarrhythmia (15), Approach to Ventricular Arrhythmia (11).
+- **Nephrology:** Glomerular Diseases (37), Acute Kidney Injury (28), Chronic Kidney Disease (31), Dialysis (17), Tubulointerstitial Diseases (21), Polycystic Kidney Disease & Inherited Tubule Disorders (18), Renal Transplantation (16), Nephrolithiasis (14).
+- **Endocrinology:** Disorders of Adrenal Cortex (34), Adrenal Adenomas/Carcinomas/Incidentalomas (16), Pheochromocytoma (14), Diabetes Mellitus (26), Anterior Pituitary (22), Posterior Pituitary (7), Pituitary Tumor Syndromes (6), Thyroid Physiology & Testing (10), Hypothyroidism (11), Hyperthyroidism (10), Thyroid Nodules & Cancer (17), Parathyroids & Bone-Mineral Metabolism (28), Osteoporosis & Dysplasias of Bone (18), MEN Syndromes (14), Autoimmune Polyendocrine Syndromes (12), Disorders of Sexual Development (17), Disorders of Testes & Male Reproductive System (15), Disorders of the Female Reproductive System (19).
+- **Neurology:** Ischemic CVA (17), Hemorrhagic CVA (14), Delirium/Dementia/Intelligence/Memory (26), Parkinson's Disease (17), Degenerative Diseases (22), Demyelinating Disorders (11), Epilepsy (29), Headache (23), Neuro-infections (9), Neurology of Nutrition and Toxicology (11), Muscle Disorders (14), Neuromuscular Junction & Other Muscle Disorders (10), Peripheral Nerve Disorders (18), Spinal Cord (21), ALS & MND (16).
+- **Gastro/Hepatology:** Liver (54), Pancreas (15), Small Intestines (19), IBD (17), Nutrition and Gastroenterology (18), Stomach (25), Esophagus (17), Gallbladder and Biliary Disorders (23).
+- **Rheumatology:** Vasculitis Syndromes (56), SLE & APS (51), RA Pathogenesis & Clinical Features (30), RA Investigations & Treatment (36), Spondyloarthritides Core Concepts (8), SpA Individual Disorders (40), SpA Diagnosis & Management (37), Systemic Sclerosis (12), Myositis and Relapsing Polychondritis (35), Crystal Arthropathies (57), Sarcoidosis/IgG4/FMF (19).
+- **Infectious Diseases:** HIV/AIDS (31), Tuberculosis, Leprosy & Mycobacteria (35), Viral Infections I (17), Fungal Infections I (10), Fungal Infections II (10), Bacterial Infections I (22), Bacterial Infections II (14), Bacterial Infections III (15), Antibiotic Prophylaxis & Resistance (11), Approach, Presentations and Sepsis (18), Parasitic Infections (18), Principles of Virology and Antivirals (10).
+- **Haematology:** Hypoproliferative Anemias (21), Megaloblastic Anemias (16), Disorders of Hemoglobin (7), Disorders of Erythroid Cells (10), Disorders of Hemostasis (20), Disorders of Megakaryocytes (14), Bone Marrow Failure & Myeloproliferative Neoplasms (17), Hemochromatosis (10).
+- **Other topics:** Toxicology: Beta Blockers, CCBs & Cardiac Glycosides (15), TCA Toxicity (4), Salicylate & Paracetamol (7), Alcohol & Glycol (6), CO/OP/Cholinergics/Heavy Metals (18), Opioid/Anticonvulsant/Sedative-Hypnotics (13), Envenomations (8), Heat Related Illness (6), Hypothermia & Frostbite (10), High Altitude Illness (10).
+
+**Do next if time allows**
+
+- **Nephrology:** Basics of Nephrology (19), Vascular Injury to the Kidney (15), Urinary Tract Obstruction (5).
+- **Cardiology:** Congenital Heart Disease (6), Cardiopulmonary Disease (11), Pulmonary Hypertension (17), Aortic Syndrome (15), Arterial Diseases of the Extremities (19), Acute & Chronic Myocarditis (10), PSVT (8), Atrial Flutter & MAT (5), Approach to Supraventricular Arrhythmia (8).
+- **Endocrinology:** Mechanisms of Hormone Action (9), Disorders of Lipoprotein Metabolism (7), Obesity (22).
+- **Genetics and metabolism:** Principles of Human Genetics (37), Storage Disorders (14), Amino Acid Metabolism Disorders (17).
+- **Neurology:** Speech and Language (15), Sleep and Its Disorders (10), Cranial Nerves (17), Consciousness (10), Neurodevelopment and Aging (10), Metabolic Diseases of Nervous System (9), Developmental Diseases (9).
+- **Infectious Diseases:** Immunization, Vaccine & Travel Medicine (7), Intraabdominal and GI Infections (16), Infective Endocarditis (14), STIs (15), UTI/Pyelonephritis/Prostatitis (15), Encephalitis, Meningitis & Brain Abscess (16), Pneumonia & Lung Abscess (24).
+- **Rheumatology and immunology:** Primary Immune Deficiencies (9), Introduction to the Immune System (28), Basics of Rheumatology (17), Sjögren's Syndrome (47), Acute Rheumatic Fever (47).
+- **Haematology:** Plasma Cell Disorders and Amyloidosis (20), PNH (13), The Porphyrias (11), Blood Transfusions & Reactions (13), Transfusion Biology and Stem Cells (14).
+- **Statistics:** Statistics (70).
+
+**Can omit or leave for last**
+
+- **Cardiology:** Cardiac Transplant (13), Renovascular Disease (5), the duplicate Pulmonary Hypertension module (13), Fundamentals of Cardiology (8, already done).
+- **Neurology:** Neuropsychiatry (9), Energy/Mood/Autonomic/Endocrine Disorders (10), Disturbances of Cerebrospinal Fluid (10), Clinical Method of Neurology (11), Disorders of Motility (12), Disorders of Special Senses (15), Intracranial Neoplasms & Paraneoplastic Disorders (13), Craniocerebral Trauma (11).
+- **Gastro:** Principles of Gastroenterology (15), Specific GI Conditions (17), Modalities in Gastroenterology (9), Colon (18).
+- **Rheumatology and others:** Purine and Pyrimidine Metabolism (6), Geriatrics & Old Age Medicine (22), Connective Tissue Diseases (20), Osteoarthritis (32), Other Arthritides and Periarticular Disorders (21).
+- **Leukaemia and lymphoma:** Acute Myeloid Leukemia (34), Acute Promyelocytic Leukemia (13), Myelodysplastic Neoplasm (19), Malignancies of Lymphoid Cells (39), Disorders of Myeloid Cells (12), Miscellaneous Plasma Cell Disorders (11).
