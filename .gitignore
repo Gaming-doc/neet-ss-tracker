@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+tests/sim*.html
+tests/claude*.html
+tests/*.png
+tests/plugin_body.js
+tests/*.out
+node_modules/
+.DS_Store
