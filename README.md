@@ -68,3 +68,12 @@ node cmp.js                             # menu-bar numbers vs tracker numbers
 ```
 
 `tests/fixture-progress.json` is a snapshot of real progress used as test data.
+
+## Since the first upload
+
+- **Mac menu bar** (`mac/`): live studied / awake / break time with Pause, Resume, Break, End, own study, sleep and wake buttons, a study-ratio line (red < 50%, orange 50–75%, green ≥ 75%) with the time needed to reach the next level, and notifications (break over its guide, 90 min straight, 20 min idle, ratio milestones). `mac/build.py` builds `neetss.1s.sh` for SwiftBar.
+- **iPhone widget** (`widget/`): a Scriptable widget fed by a small Apps Script feed. The feed's source lives in the private residency repo (`gas/feed.src.gs`); its key and URL are never committed (`widget/feed_url.txt` is gitignored).
+- **Own study** (e.g. a Harrison chapter) counts as study.
+- **Carried-over modules**: each stretch of study counts on the day it happened. A module paused overnight and resumed today counts today's part today, on the page, in the menu bar and in the widget.
+- `gas/Code.gs` is the deployed web app. It also serves the DM residency trackers (`?app=cardio`, `?app=mge`).
+- Tests: `bash tests/run_all.sh`.

@@ -1,4 +1,5 @@
-import json
+import json, os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 T=open('tracker.tpl.html').read()
 DATA=open('marrow/schedule4.json').read()
 SEED={}  # optional: module ids to pre-tick on a brand-new device, e.g. {"m:Cardio: IHD":1}
@@ -40,7 +41,8 @@ function gasLoad(){
     .withSuccessHandler(txt=>{
       let remote=null; try{ remote=txt?JSON.parse(txt):null; }catch(e){}
       const local=localStamp();
-      if(remote && remote.done && (!local || (remote.updatedAt||"")>=local)){
+      if(remote && remote.done && local && (remote.updatedAt||"")===local){ setSync("ok","Synced with Google Drive"); return; }
+      if(remote && remote.done && (!local || (remote.updatedAt||"")>local)){
         done=Object.assign({},remote.done); times=Object.assign({},remote.times||{}); actual=Object.assign({},remote.actual||{}); ext=normExt(remote.ext); saveLocal();
         try{ localStorage.setItem("neetss-updated",remote.updatedAt||""); }catch(e){}
         renderAll(); setSync("ok","Synced with Google Drive");
@@ -49,7 +51,8 @@ function gasLoad(){
     .withFailureHandler(()=>setSync("warn","Couldn't reach Google Drive — showing this device's copy"))
     .loadProgress();
 }
-function connect(){ gasLoad(); document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") gasLoad(); }); }
+function connect(){ gasLoad(); document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") gasLoad(); });
+  setInterval(()=>{ const ae=document.activeElement; if(document.visibilityState==="visible" && !(ae&&/^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName))) gasLoad(); },30000); }
 
 '''
 g=g[:s]+GAS+g[e:]

@@ -7,3 +7,8 @@ tests/plugin_body.js
 tests/*.out
 node_modules/
 .DS_Store
+widget/feed_url.txt
+widget/NEET SS.js
+tests/mb.out
+tests/scen.out
+tests/mb_after*.json

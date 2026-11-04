@@ -143,7 +143,7 @@ button:focus-visible,.item:focus-visible,.chip:focus-visible{outline:3px solid v
 .item.done .box svg{opacity:1;transform:scale(1)}
 .item.done .name .ti{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:color-mix(in srgb,var(--ink) 45%,transparent)}
 .item.pop .box{transform:scale(1.18)}
-.k-main{--hc:var(--hl-main);--hs:var(--hl-main-soft)} .k-ss{--hc:var(--hl-ss);--hs:var(--hl-ss-soft)} .k-qrp{--hc:var(--hl-qrp);--hs:var(--hl-qrp-soft)} .k-pyq{--hc:var(--hl-pyq);--hs:var(--hl-pyq-soft)} .k-task{--hc:var(--hl-task);--hs:var(--hl-task-soft)} .k-hy{--hc:var(--hl-pyq);--hs:var(--hl-pyq-soft)} .k-mar{--hc:var(--hl-mar);--hs:var(--hl-mar-soft)}
+.k-free{--hc:var(--c-id);--hs:color-mix(in srgb,var(--c-id) 16%,var(--surface))} .k-main{--hc:var(--hl-main);--hs:var(--hl-main-soft)} .k-ss{--hc:var(--hl-ss);--hs:var(--hl-ss-soft)} .k-qrp{--hc:var(--hl-qrp);--hs:var(--hl-qrp-soft)} .k-pyq{--hc:var(--hl-pyq);--hs:var(--hl-pyq-soft)} .k-task{--hc:var(--hl-task);--hs:var(--hl-task-soft)} .k-hy{--hc:var(--hl-pyq);--hs:var(--hl-pyq-soft)} .k-mar{--hc:var(--hl-mar);--hs:var(--hl-mar-soft)}
 .box svg path{stroke:#1B1E3A}
 .k-ss .box svg path,.k-qrp .box svg path,.k-pyq .box svg path,.k-task .box svg path,.k-hy .box svg path,.k-mar .box svg path{stroke:#fff}
 .note{font-size:13px;color:var(--muted);margin:0}
@@ -284,6 +284,17 @@ a.btn{display:inline-block;text-decoration:none;color:var(--ink)}
 .brk-list span{display:flex;align-items:center;gap:8px}
 .brk-list b{font-family:var(--f-mono);font-size:12px}
 .brk-list .dot{width:9px;height:9px;border-radius:50%;background:var(--bkc);display:inline-block;flex:0 0 auto}
+.own{display:grid;gap:8px}
+.own-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.own-form input[type=text]{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;min-height:36px;flex:1 1 260px;min-width:0}
+.own-form select{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:6px 8px;min-height:36px}
+.own-form input:focus,.own-form select:focus{outline:3px solid var(--accent);outline-offset:1px}
+.own .item{grid-template-columns:minmax(150px,1fr) auto}
+.own .item .ttl{display:grid;gap:2px;min-width:0}
+.own .item .ttl .k{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
+.own .item .ttl b{font-weight:700;overflow-wrap:anywhere}
+.own-tot{font-size:12.5px;color:var(--muted)}
+@media (max-width:520px){.own .item{grid-template-columns:minmax(0,1fr)}.own .item .ctl{grid-row:2;grid-column:1;margin-left:0;justify-items:start}}
 .bk-sel{font:inherit;font-size:12px;font-weight:800;border-radius:8px;padding:5px 8px;border:1.5px solid var(--warn);background:var(--surface);color:var(--ink);cursor:pointer;line-height:1.2;min-height:30px}
 .bk-sel:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .bk-lunch{--bkc:#E39A0B} .bk-dinner{--bkc:#B5654A} .bk-series{--bkc:#D6409F} .bk-nap{--bkc:#7C5CFC} .bk-other{--bkc:#0FA3A3}
@@ -291,9 +302,10 @@ a.btn{display:inline-block;text-decoration:none;color:var(--ink)}
 .tl{display:grid;gap:4px}
 .tl-strip{position:relative;height:22px;border-radius:7px;background:var(--surface-2);overflow:hidden}
 .tl-strip i{position:absolute;top:0;bottom:0}
+.tl-strip i.tl-st{top:3px;bottom:3px;border-radius:3px;box-shadow:0 0 0 1px var(--surface)}
 .tl-sleep{background:color-mix(in srgb,var(--accent) 42%,transparent)}
 .tl-brk{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--warn) 60%,transparent) 0 4px,transparent 4px 8px)}
-.tl-main{background:var(--hl-main)} .tl-ss{background:var(--hl-ss)} .tl-qrp{background:var(--hl-qrp)} .tl-mar{background:var(--hl-mar)} .tl-pyq{background:var(--hl-pyq)} .tl-task,.tl-hy{background:var(--hl-task)}
+.tl-free{background:var(--c-id)} .tl-main{background:var(--hl-main)} .tl-ss{background:var(--hl-ss)} .tl-qrp{background:var(--hl-qrp)} .tl-mar{background:var(--hl-mar)} .tl-pyq{background:var(--hl-pyq)} .tl-task,.tl-hy{background:var(--hl-task)}
 .tl-now{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink)}
 .tl-ax{position:relative;height:14px;font-family:var(--f-mono);font-size:10.5px;color:var(--muted)}
 .tl-ax span{position:absolute;transform:translateX(-50%)} .tl-ax span:first-child{transform:none} .tl-ax span:last-child{transform:translateX(-100%)}
@@ -369,14 +381,14 @@ const DATA = {"phase1":[{"n":1,"date":"2026-10-30","title":"Cardiology I","sys":
 const BASELINE_MAIN = 53; // solved Oct 29, before Day 1
 const EXAM = "2026-12-11";
 const SYS = {cardio:"Cardiology",neuro:"Neurology",onco:"Heme / Onco",endo:"Endocrinology",gi:"Gastro & Hepatology",id:"Infectious Diseases",cc:"Critical Care",nephro:"Nephrology",rheum:"Rheumatology",pulm:"Pulmonology",misc:"Mixed"};
-const KLAB = {main:"Main Harrison",ss:"Super Specialty",qrp:"QRP",pyq:"Paper",task:"Task"};
+const KLAB = {main:"Main Harrison",ss:"Super Specialty",qrp:"QRP",pyq:"Paper",task:"Task",free:"Own study"};
 const CHECK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 let done = {};
 let times = {};
 let actual = {};
-let ext = {acc:{}, moved:{}, scores:{}, dt:{}, sleep:{}, bed:null, brk:[]};
-function normExt(x){ x=x||{}; return {acc:Object.assign({},x.acc||{}), moved:Object.assign({},x.moved||{}), scores:Object.assign({},x.scores||{}), dt:Object.assign({},x.dt||{}), sleep:Object.assign({},x.sleep||{}), bed:x.bed||null, brk:Array.isArray(x.brk)?x.brk.map(b=>Object.assign({},b)):[]}; }
+let ext = {acc:{}, moved:{}, scores:{}, dt:{}, sleep:{}, bed:null, brk:[], free:{}};
+function normExt(x){ x=x||{}; return {acc:Object.assign({},x.acc||{}), moved:Object.assign({},x.moved||{}), scores:Object.assign({},x.scores||{}), dt:Object.assign({},x.dt||{}), sleep:Object.assign({},x.sleep||{}), bed:x.bed||null, brk:Array.isArray(x.brk)?x.brk.map(b=>Object.assign({},b)):[], free:Object.assign({},x.free||{})}; }
 let tab = "p1", sel = {p1:1, p2:1};
 const ref = null;
 
@@ -440,7 +452,8 @@ function gasLoad(){
     .withSuccessHandler(txt=>{
       let remote=null; try{ remote=txt?JSON.parse(txt):null; }catch(e){}
       const local=localStamp();
-      if(remote && remote.done && (!local || (remote.updatedAt||"")>=local)){
+      if(remote && remote.done && local && (remote.updatedAt||"")===local){ setSync("ok","Synced with Google Drive"); return; }
+      if(remote && remote.done && (!local || (remote.updatedAt||"")>local)){
         done=Object.assign({},remote.done); times=Object.assign({},remote.times||{}); actual=Object.assign({},remote.actual||{}); ext=normExt(remote.ext); saveLocal();
         try{ localStorage.setItem("neetss-updated",remote.updatedAt||""); }catch(e){}
         renderAll(); setSync("ok","Synced with Google Drive");
@@ -449,7 +462,8 @@ function gasLoad(){
     .withFailureHandler(()=>setSync("warn","Couldn't reach Google Drive — showing this device's copy"))
     .loadProgress();
 }
-function connect(){ gasLoad(); document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") gasLoad(); }); }
+function connect(){ gasLoad(); document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible") gasLoad(); });
+  setInterval(()=>{ const ae=document.activeElement; if(document.visibilityState==="visible" && !(ae&&/^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName))) gasLoad(); },30000); }
 
 // ---------- math ----------
 const allP1 = DATA.phase1.flatMap(d=>d.items.map(i=>({...i,day:d.n})));
@@ -464,6 +478,27 @@ const dayLabel=d=>(d.key.startsWith("p1")?"Day ":"Rev ")+d.n;
 function incoming(d){ const out=[]; for(const id in ext.moved){ if(ext.moved[id]===d.key){ const r=ITEMBY[id]; if(r && r.day.key!==d.key) out.push(Object.assign({},r.i,{from:r.day})); } } return out; }
 function itemsOf(d){ return d.items.filter(i=>!ext.moved[i.id]||ext.moved[i.id]===d.key).concat(incoming(d)); }
 function dayPct(d){ const its=itemsOf(d); const tot=its.reduce((a,i)=>a+(i.q||20),0); const got=its.reduce((a,i)=>a+(isDone(i.id)?(i.q||20):0),0); return tot?Math.round(got*100/tot):0; }
+const OWNK={read:"Harrison reading",notes:"Notes / revision",video:"Video lecture",pyq:"PYQ discussion",other:"Other study"};
+function regFree(){ const f=ext.free||{}; for(const id in f){ const x=f[id]; if(!x) continue; const day=ALLDAYS.find(dd=>dd.date===x.d)||null;
+  ITEMBY[id]={i:{id,k:"free",t:x.n||OWNK[x.k]||"Own study",q:0,sys:"misc",own:x.k||"other"},day}; } }
+const isFree=id=>String(id).startsWith("x:");
+function ownOn(date){ return Object.keys(ext.free||{}).filter(id=>{ const a=actual[id]; return a&&a.s ? dayOf(a.s)===date : (ext.free[id].d===date); }).sort((a,b)=>((actual[a]||{}).s||"").localeCompare((actual[b]||{}).s||"")); }
+function startOwn(name,k){
+  const now=new Date().toISOString(), id="x:"+Date.now().toString(36);
+  ext.free=ext.free||{}; ext.free[id]={n:String(name||"").trim().slice(0,80)||OWNK[k]||"Own study",k:OWNK[k]?k:"other",d:TODAY};
+  regFree(); const ended=endRunningBrk(now);
+  for(const k2 in actual){ const o=actual[k2]; if(o&&o.s&&!o.e&&!isPaused(o)) actual[k2]=Object.assign(JSON.parse(JSON.stringify(o)),{p:pauses(o).concat([{f:now}])}); }
+  actual[id]={s:now}; queueSave(); renderAll(); coachEvent("s",id,ended?{brk:ended}:undefined);
+}
+function ownHTML(d){
+  const ids=ownOn(d.date), isT=d.date===TODAY; if(!ids.length && !isT) return "";
+  const tot=ids.reduce((s,id)=>s+(actual[id]?activeM(actual[id]):0),0);
+  let h=`<div class="block-h"><h3>Own study</h3><span class="when">anything outside the modules: reading a Harrison topic, notes, a lecture</span>${tot?`<span class="own-tot">${fmtM(tot)} today</span>`:""}</div><div class="own">`;
+  if(isT) h+=`<div class="own-form"><input type="text" class="own-name" maxlength="80" placeholder="What are you studying? e.g. Harrison ch. 258 Heart failure" aria-label="What you're studying"><select class="own-kind" aria-label="Type of study">${Object.keys(OWNK).map(k=>`<option value="${k}">${OWNK[k]}</option>`).join("")}</select><button class="ab start own-go">▶ Start</button></div>`;
+  h+=ids.map(id=>{ const x=ext.free[id]||{}, a=actual[id]||{};
+    return `<div class="item k-free" data-id="${esc(id)}"><div class="ttl"><span class="k">${esc(OWNK[x.k]||"Own study")}</span><b>${esc(x.n||"Own study")}</b></div><div class="ctl"><span class="act">${a.s?actHTML(id):`<button class="ab start" data-act="s">▶ Start now</button>`}</span></div></div>`; }).join("");
+  return h+`</div>`;
+}
 function curDay(id){ const m=ext.moved[id]; return m&&DAYBY[m] ? DAYBY[m] : (ITEMBY[id]?ITEMBY[id].day:null); }
 function moveHTML(i){
   const cd=curDay(i.id); if(!cd) return "";
@@ -652,8 +687,8 @@ function act(id,what){
   if(what==="s"){ others(o=>{ o.e=now; return o; }); actual[id]={s:now}; }
   else if(what==="p"){ if(a.s && !a.e && !isPaused(a)){ a.p=pauses(a).concat([{f:now}]); actual[id]=a; } }
   else if(what==="r"){ if(isPaused(a)){ others(o=>{ o.p=pauses(o).concat([{f:now}]); return o; }); closePause(a); actual[id]=a; } }
-  else if(what==="e"){ if(a.s){ if(isPaused(a)) closePause(a); a.e=now; actual[id]=a; if(!done[id]){ done[id]=1; ext.dt[id]=TODAY; } } }
-  else { delete actual[id]; }
+  else if(what==="e"){ if(a.s){ if(isPaused(a)) closePause(a); a.e=now; actual[id]=a; if(!done[id] && !isFree(id)){ done[id]=1; ext.dt[id]=TODAY; } } }
+  else { delete actual[id]; if(isFree(id) && ext.free) delete ext.free[id]; }
   queueSave(); renderAll(); coachEvent(what,id,endedBrk?{brk:endedBrk}:undefined);
 }
 let nudged={}; try{ nudged=JSON.parse(localStorage.getItem("neetss-nudged")||"{}")||{}; }catch(e){}
@@ -739,7 +774,7 @@ function renderSheet(scroll){
         <button class="btn" id="todayBtn">Today</button>
         <button class="btn primary" id="allBtn">${pct===100?"Clear day":"Mark day done"}</button>
       </div>
-    </header><div class="blocks"><section class="block coach" id="coach"></section><section class="block" id="myTimes"></section>${body}</div>`;
+    </header><div class="blocks"><section class="block coach" id="coach"></section><section class="block" id="myTimes"></section>${(()=>{ const o=ownHTML(d); return o?`<section class="block" id="ownStudy">${o}</section>`:""; })()}${body}</div>`;
   $("#sheet").querySelectorAll(".item .tick").forEach(b=>b.onclick=()=>toggle(b.closest(".item").dataset.id));
   $("#sheet").querySelectorAll(".tm-in").forEach(inp=>inp.onchange=()=>{
     const id=inp.dataset.id, f=inp.dataset.f, v=Object.assign({},tget(id)), oldE=v.e||"";
@@ -766,6 +801,8 @@ function renderSheet(scroll){
     queueSave(); renderMyTimes(d); renderCoach(d); planSoon(d);
   });
   $("#sheet").querySelectorAll(".item .ab").forEach(btn=>btn.onclick=()=>act(btn.closest(".item").dataset.id,btn.dataset.act));
+  { const go=$("#sheet .own-go"), nm=$("#sheet .own-name"), kd=$("#sheet .own-kind");
+    if(go){ const start=()=>{ startOwn(nm.value, kd.value); }; go.onclick=start; nm.onkeydown=e=>{ if(e.key==="Enter") start(); }; } }
   $("#sheet").querySelectorAll(".item .bk-sel").forEach(sel=>sel.onchange=()=>{ const k=sel.value; if(!k) return; if(k==="other"){ const row=$("#coach .bk-oth"); if(row){ row.hidden=false; row.scrollIntoView({block:"center",behavior:"smooth"}); const n=row.querySelector(".bk-name"); if(n) n.focus({preventScroll:true}); sel.value=""; return; } } startBrk(k); });
   bindScoreInputs($("#sheet"));
   renderMyTimes(d); SHEET_D=d; renderCoach(d);
@@ -988,12 +1025,17 @@ function bedOf(date){
   if(ext.bed && dayOf(ext.bed)===date) return minOf(ext.bed,date);
   return null;
 }
+// A study day runs from that day's wake-up (or 06:00) to the next day's wake-up. Each stretch of study counts on the day it
+// happened, so a module paused overnight and resumed today counts today's part today. The current day stays open-ended.
+function dayWin(date){ const cut=d=>{ const w=wakeMinOf(d); return w!=null?Math.min(w,720):DAY_CUT; }; const n=new Date(date+"T00:00:00Z"); n.setUTCDate(n.getUTCDate()+1); const nx=n.toISOString().slice(0,10);
+  return [Date.parse(date+"T00:00:00+05:30")+cut(date)*60000, date===todayIST()?Infinity:Date.parse(nx+"T00:00:00+05:30")+cut(nx)*60000]; }
 function activeIntervals(date){
-  const out=[], now=nowISO();
-  for(const id in actual){ const a=actual[id]; if(!a||!a.s||dKey(a.s)!==date) continue;
+  const out=[], now=nowISO(), [w0,w1]=dayWin(date), base=Date.parse(date+"T00:00:00+05:30");
+  for(const id in actual){ const a=actual[id]; if(!a||!a.s) continue;
     const r=ITEMBY[id], k=r?r.i.k:"task", tt=r?r.i.t:"", end=a.e||now; let cur=a.s;
-    pauses(a).slice().sort((x,y)=>x.f.localeCompare(y.f)).forEach(p=>{ if(p.f>cur) out.push({a:minOf(cur,date),b:minOf(p.f,date),k,t:tt}); cur=p.t||end; });
-    if(end>cur) out.push({a:minOf(cur,date),b:minOf(end,date),k,t:tt}); }
+    const add=(f,to)=>{ const lo=Math.max(Date.parse(f),w0), hi=Math.min(Date.parse(to),w1); if(hi>lo) out.push({a:Math.round((lo-base)/60000),b:Math.round((hi-base)/60000),k,t:tt}); };
+    pauses(a).slice().sort((x,y)=>x.f.localeCompare(y.f)).forEach(p=>{ if(p.f>cur) add(cur,p.f); cur=p.t||end; });
+    if(end>cur) add(cur,end); }
   return out.filter(x=>x.b>x.a).sort((x,y)=>x.a-y.a);
 }
 // ---------- named breaks: lunch, dinner, series, short nap, other ----------
@@ -1064,7 +1106,7 @@ function stripHTML(tl){
   if(tl.bed!=null) h+=seg(tl.bed,span,"sleep",`Sleep from ${clock(tl.bed)}`);
   tl.gaps.forEach(x=>h+=seg(x.a,x.b,"brk",`Break ${clock(x.a)}–${clock(x.b)} · ${fmtM(x.b-x.a)}`));
   (tl.named||[]).forEach(x=>{ h+=`<i class="tl-bk bk-${x.k}" style="left:${pc(x.a)}%;width:${Math.max(.35,pc(x.b)-pc(x.a))}%" title="${esc(x.label)} ${clock(x.a)}–${clock(x.b)} · ${fmtM(x.b-x.a)}"></i>`; });
-  tl.iv.forEach(x=>h+=seg(x.a,x.b,x.k,`${x.t} ${clock(x.a)}–${clock(x.b)}`));
+  tl.iv.forEach(x=>h+=seg(x.a,x.b,x.k+" tl-st",`${x.t} ${clock(x.a)}–${clock(x.b)}`));
   if(tl.nowM!=null&&tl.bed==null&&tl.nowM<=span) h+=`<b class="tl-now" style="left:${pc(tl.nowM)}%"></b>`;
   return h+`</div><div class="tl-ax">${[0,6,12,18,24,30,36].filter(x=>x*60<=span).map(x=>`<span style="left:${pc(x*60)}%">${String(x%24).padStart(2,"0")}</span>`).join("")}</div>`;
 }
@@ -1193,7 +1235,7 @@ function renderCoach(d){
     <div class="co-stats">${stats.map(s=>`<div class="co-stat ${s[2]}"><span>${s[0]}</span><b>${s[1]}</b></div>`).join("")}</div>
     ${d.date<=todayIST()?sleepRowHTML(d):""}
     ${brkRowHTML(d)}
-    ${tl?`<div class="tl">${stripHTML(tl)}<div class="tl-key"><span><i class="tl-sleep"></i>Sleep</span><span><i class="tl-main"></i>Studying (colour = QBank)</span><span><i class="tl-brk"></i>Break · not studying</span>${(tl.named||[]).length?[...new Set(tl.named.map(x=>x.k))].map(k=>`<span><i class="tl-bk bk-${k}"></i>${k==="other"?"Other break":BRK[k].l}</span>`).join(""):""}</div>${(()=>{ const s=brkSummary(d.date,tl); return s?`<p class="note">Breaks: ${s}</p>`:""; })()}<details class="co-notes"><summary>Day timeline · studied ${fmtM(tl.studied)}, breaks ${fmtM(tl.brk)}${tl.awake?`, awake ${fmtM(tl.awake)}`:""}</summary><div>${timelineList(tl)}</div></details></div>`:""}
+    ${tl?`<div class="tl">${stripHTML(tl)}<div class="tl-key"><span><i class="tl-sleep"></i>Sleep</span>${[...new Set(tl.iv.map(x=>x.k))].map(k=>`<span><i class="tl-${k}"></i>${({main:"Main Harrison",ss:"Super Specialty",qrp:"QRP",mar:"Marrow",pyq:"PYQ / mock",task:"Task",hy:"PYQ topic",free:"Own study"})[k]||"Study"}</span>`).join("")||`<span><i class="tl-main"></i>Studying</span>`}<span><i class="tl-brk"></i>Break · not studying</span>${(tl.named||[]).length?[...new Set(tl.named.map(x=>x.k))].map(k=>`<span><i class="tl-bk bk-${k}"></i>${k==="other"?"Other break":BRK[k].l}</span>`).join(""):""}</div>${(()=>{ const s=brkSummary(d.date,tl); return s?`<p class="note">Breaks: ${s}</p>`:""; })()}<details class="co-notes"><summary>Day timeline · studied ${fmtM(tl.studied)}, breaks ${fmtM(tl.brk)}${tl.awake?`, awake ${fmtM(tl.awake)}`:""}</summary><div>${timelineList(tl)}</div></details></div>`:""}
     ${last?`<div class="co-last"><span class="co-when">${hm(last.t)} · latest</span><b>${esc(last.title)}</b>${last.lines.map(x=>`<span>${x}</span>`).join("")}</div>`:""}
     ${sug.length?`<ul class="co-list">${sug.map(s=>`<li class="u${s.u}"><span class="tx">${s.html}</span>${s.a?act2(s.a):""}</li>`).join("")}</ul>`:""}
     ${aiBlock()}
@@ -1222,7 +1264,15 @@ function coachEvent(type,id,extra){
   let d0=null; const d=i?(curDay(id)||r.day):(extra&&extra.key?extra:null), st=d?dayStatus(d):null;
   const dayLine=()=>{ if(st&&st.isToday&&st.undone.length){ const f=st.finish; L.push(f>LIGHTS_OUT?`Day outlook: about ${clock(f)} finish, ${fmtM(f-LIGHTS_OUT)} past lights out. The Coach panel suggests what to move.`:`Day outlook: about ${clock(f)} finish, ${fmtM(LIGHTS_OUT-f)} before lights out.`); } else if(st&&st.isToday&&!st.undone.length) L.push(`That's everything planned for today. Sleep by 23:00.`); };
   if((type==="s"||type==="r") && extra && extra.brk){ const b=extra.brk, m=mins(b.s,b.e), mx=(BRK[b.k]||BRK.other).max; L.push(`${esc(brkName(b))} ended: ${fmtM(m)}${m>mx?`, ${fmtM(m-mx)} over the ${mx}-minute guide`:""}.`); }
-  if(type==="s"){
+  if(type==="s" && i.k==="free"){
+    title=`Own study: ${i.t}`;
+    L.push(`Counts toward today's studied time. It doesn't tick any module.`);
+    const pz=Object.keys(actual).filter(k=>k!==id&&ITEMBY[k]&&isPaused(actual[k])); if(pz.length) L.push(`<b>${esc(ITEMBY[pz[0]].i.t)}</b>${pz.length>1?` and ${plural(pz.length-1,"other")}`:""} paused; resume when you're done.`);
+    if(i.own==="read") L.push(`Read actively: highlight what PYQs have tested and note one line per sub-topic you'd forget.`);
+    else if(i.own==="video") L.push(`Watch at 1.5× and pause to write the 3 key facts from each section.`);
+    const st2=dayStatus(ALLDAYS.find(x=>x.date===TODAY)||r.day||ALLDAYS[0]); if(st2&&st2.isToday&&st2.undone.length) L.push(`Today's plan still has ${fmt(st2.qRem)} Qs, about ${fmtM(st2.remM)} at your pace.`);
+    d0=TODAY;
+  } else if(type==="s"){
     title=`Started ${i.t}`;
     const pz=Object.keys(actual).filter(k=>k!==id&&ITEMBY[k]&&isPaused(actual[k]));
     if(pz.length) L.push(`<b>${esc(ITEMBY[pz[0]].i.t)}</b>${pz.length>1?` and ${plural(pz.length-1,"other")}`:""} stay${pz.length>1?"":"s"} paused. Time on this module counts as study, not as a break on ${pz.length>1?"those":"that one"}.`);
@@ -1257,7 +1307,7 @@ function coachEvent(type,id,extra){
       else if(mpq>pr*1.4) L.push(`Slower than planned. If that's from reading explanations it's time well spent; if not, set a 25-minute timer per 8 Qs.`); }
     const v=vsPlan(id); if(v) L.push(`Against your planned time: ${v.replace(/<[^>]+>/g,"")}.`);
     const n=pauses(a).length; if(n){ const sp=pauseSplit(a,id); L.push(`${plural(n,"pause")}, ${fmtM(sp.tot)} in total${Math.round(sp.oth)>=1?`: ${fmtM(sp.brk)} break and ${fmtM(sp.oth)} studying other modules`:""}.`); }
-    L.push(`Marked as done${i.q&&ext.acc[id]==null?". Type how many you got right":""}. If you didn't finish it, untick it and carry the rest forward.`);
+    if(i.k==="free") L.push(`Own study logged. It counts toward today's studied time.`); else L.push(`Marked as done${i.q&&ext.acc[id]==null?". Type how many you got right":""}. If you didn't finish it, untick it and carry the rest forward.`);
     dayLine();
     if(st){ const nx=nextUp(st); if(nx&&st.isToday) L.push(`Next: <b>${esc(nx.t)}</b>${nx.q?` (${nx.q} Qs, about ${fmtM(needM(nx))})`:""}.`); }
   } else if(type==="tick"){
@@ -1395,6 +1445,7 @@ function aiSummary(){
   const sn=sleepNights(7); if(sn.length) lines.push("Sleep last nights (min): "+sn.map(x=>`${x.dt} ${x.dur}`).join(", "));
   const tlT=dayTimeline(todayIST()); if(tlT) lines.push(`Today: studied ${tlT.studied} min, breaks (awake, not studying) ${tlT.brk} min, awake ${tlT.awake||0} min.`);
   if(tlT){ const bs=brkSummary(todayIST(),tlT); if(bs) lines.push(`Named breaks today: ${bs}.`); }
+  { const os=ownOn(todayIST()).filter(id=>actual[id]&&actual[id].s); if(os.length) lines.push(`Own study today (outside the modules): ${os.map(id=>`${ext.free[id].n} ${Math.round(activeM(actual[id]))} min`).join("; ")}.`); }
   const pend=ALLDAYS.filter(x=>x.date<TODAY).flatMap(x=>itemsOf(x).filter(i=>!isDone(i.id))); if(pend.length) lines.push(`Backlog from earlier days: ${pend.length} items, ${pend.reduce((a,i)=>a+i.q,0)} Qs.`);
   return lines.join("\n");
 }
@@ -1448,6 +1499,7 @@ function goToday(){
   else { tab="p1"; sel.p1=1; }
 }
 function renderAll(scroll){
+  regFree();
   { const td=todayIST(); if(td!==TODAY){ TODAY=td; goToday(); scroll=true; } }
   document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===tab));
   $("#planView").hidden = (tab==="clock"||tab==="hy"||tab==="mar"||tab==="stats"); $("#clockView").hidden = tab!=="clock"; $("#hyView").hidden = tab!=="hy"; $("#marView").hidden = tab!=="mar"; $("#statsView").hidden = tab!=="stats";

@@ -13,7 +13,7 @@ async function open(b,o){
   await pg.addInitScript(([data,local,mode])=>{
     if(local) for(const k in local) localStorage.setItem(k,local[k]);
     window.__saves=[];
-    if(mode==='gas'){ const mk=()=>{ let ok=()=>{},fl=()=>{}; const r={withSuccessHandler(f){ok=f;return r;},withFailureHandler(f){fl=f;return r;},loadProgress(){setTimeout(()=>window.__gasFail?fl(new Error('x')):ok(data),40);},saveProgress(j){window.__saves.push(j);setTimeout(()=>ok(new Date().toISOString()),20);} }; return r; }; window.google={script:{get run(){return mk();}}}; }
+    if(mode==='gas'){ const mk=()=>{ let ok=()=>{},fl=()=>{}; const r={withSuccessHandler(f){ok=f;return r;},withFailureHandler(f){fl=f;return r;},loadProgress(){setTimeout(()=>window.__gasFail?fl(new Error('x')):ok(data),40);},saveProgress(j){window.__saves.push(j);setTimeout(()=>ok(new Date().toISOString()),20);}, loadDm(){ return r.loadProgress(); }, saveDm(j){ return r.saveProgress(j); } }; return r; }; window.google={script:{get run(){return mk();}}}; }
     if(mode==='claude'){ let snapCb=null; const store={v:data?JSON.parse(data):null};
       const ref={onSnapshot(cb,err){ snapCb=cb; setTimeout(()=>cb({exists:!!store.v,data:()=>store.v,metadata:{fromCache:false,hasPendingWrites:false}}),40); return ()=>{}; }, async set(v){ store.v=JSON.parse(JSON.stringify(v)); window.__saves.push(JSON.stringify(v)); }};
       window.claude={use:async(n)=>n==='db'?{doc:()=>ref}:n==='sample'?(async(p,cb)=>{ window.__prompt=p; cb&&cb.onText&&cb.onText({text:'AI says hi'}); return 'AI says hi'; }):null}; }

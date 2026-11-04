@@ -1,0 +1,25 @@
+const fs=require('fs'); const src=fs.readFileSync('plugin_body.js','utf8');
+let FILE=fs.readFileSync('fixture-progress.json','utf8'); let NOW=Date.parse('2026-11-01T18:20:00Z');
+global.$={NSHomeDirectory:()=>'/Users/s',NSString:{stringWithContentsOfFileEncodingError:(p)=>p.endsWith('GoogleDrive-dr.sadananth@gmail.com/My Drive/neet-ss-tracker-progress.json')?FILE:null,alloc:{initWithUTF8String:(t)=>({writeToFileAtomicallyEncodingError:(p,at,enc)=>{ if(/progress\.json$/.test(p)){ FILE=t; global.WROTE={p,at}; } return true; }})}},NSUTF8StringEncoding:4,NSFileManager:{defaultManager:{contentsOfDirectoryAtPathError:(p)=>p.endsWith('CloudStorage')?['GoogleDrive-dr.sadananth@gmail.com']:['My Drive']}}};
+global.Application={currentApplication:()=>({activate(){},displayDialog:()=>({textReturned:'Harrison ch 258 HF'})})};
+global.ObjC={unwrap:x=>x,deepUnwrap:x=>x};
+const RealDate=Date; global.Date=class extends RealDate{ constructor(...a){ super(...(a.length?a:[NOW])); } static now(){ return NOW; } };
+eval(src);
+const menu=()=>run(['/Users/s/SwiftBar/neetss.1s.sh']);
+const click=(label)=>{ const N=s=>s.replace(/[\uFE0F\u00A0]/g,'').replace(/\s+/g,' ').trim(); const line=menu().split('\n').find(l=>N(l.replace(/^-+/,'').split(' | ')[0]).startsWith(N(label))); if(!line) throw new Error('no item '+label+'\n'+menu()); const m=line.match(/param2=(\S+) param3=(\S+)/); run(['/Users/s/SwiftBar/neetss.1s.sh','act',m[1],m[2]]); return line; };
+const show=(t)=>{ console.log('---',t); console.log(menu().split('\n').filter(l=>!/font=Menlo size=13|size=1[12]|^---$|Refresh|Open tracker/.test(l)).map(l=>l.replace(/ \| bash=.*$/,' [action]')).join('\n')); };
+show('initial: Stroke running');
+console.log('clicked:',click('⏸  Pause').replace(/ \|.*/,'')); NOW+=5*60000; show('after pause');
+console.log('clicked:',click('▶  Resume Neuro SS: Stroke').replace(/ \|.*/,'')); NOW+=10*60000;
+console.log('clicked:',click('Lunch').replace(/ \|.*/,'')); NOW+=20*60000; show('on lunch');
+console.log('clicked:',click('■  End break').replace(/ \|.*/,'')); NOW+=5*60000; show('after end break');
+console.log('clicked:',click('■  End now').replace(/ \|.*/,'')); show('after end now');
+const D=JSON.parse(FILE); console.log('done stroke:',D.done['s3:Neuro SS: Stroke'],D.ext.dt['s3:Neuro SS: Stroke'],'updatedAt',D.updatedAt,'atomic',WROTE.at);
+console.log('clicked:',click('😴  Going to sleep').replace(/ \|.*/,'')); NOW+=8*3600000; show('next morning');
+console.log('clicked:',click("☀️  I'm up now").replace(/ \|.*/,'')); show('after wake');
+fs.writeFileSync('mb_after.json',FILE);
+// own study via menu (dialog stubbed by passing name directly through act)
+NOW+=60*60000; run(['/Users/s/SwiftBar/neetss.1s.sh','act','own',neetHex('Harrison ch 258 HF')]);
+NOW+=25*60000; show('own study running');
+console.log('clicked:',click('■  End').replace(/ \|.*/,'')); show('own ended');
+fs.writeFileSync('mb_after2.json',FILE);

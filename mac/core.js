@@ -23,11 +23,16 @@ function neetCore(D, nowMs){
     return c;
   }
   var T=today(), base=P(T+"T00:00:00+05:30"), mOf=function(ms){ return Math.round((ms-base)/60000); }, nowIso=new Date(nowMs).toISOString();
+  // Today runs from today's wake-up (or 06:00) onwards. Each stretch of study counts on the day it happened,
+  // so a module carried over from an earlier day (paused overnight, resumed today) counts today's part.
+  var wT=wakeMin(T), W0=base+(wT!=null?Math.min(wT,720):DAY_CUT)*60000;
+  function segs(a){ var out=[], end=a.e||nowIso, cur=a.s;
+    function add(f,t){ var lo=Math.max(P(f),W0), hi=P(t); if(hi>lo) out.push([lo,hi]); }
+    pauses(a).slice().sort(function(x,y){ return x.f<y.f?-1:1; }).forEach(function(p){ if(p.f>cur) add(cur,p.f); cur=p.t||end; });
+    if(end>cur) add(cur,end); return out; }
   var iv=[], ivMs=[];
-  for(var id in actual){ var a=actual[id]; if(!a||!a.s||dayOf(a.s)!==T) continue;
-    var end=a.e||nowIso, cur=a.s;
-    pauses(a).slice().sort(function(x,y){ return x.f<y.f?-1:1; }).forEach(function(p){ if(p.f>cur){ iv.push([mOf(P(cur)),mOf(P(p.f))]); ivMs.push([P(cur),P(p.f)]); } cur=p.t||end; });
-    if(end>cur){ iv.push([mOf(P(cur)),mOf(P(end))]); ivMs.push([P(cur),P(end)]); } }
+  for(var id in actual){ var a=actual[id]; if(!a||!a.s) continue;
+    segs(a).forEach(function(x){ ivMs.push(x); iv.push([mOf(x[0]),mOf(x[1])]); }); }
   iv=iv.filter(function(x){ return x[1]>x[0]; }).sort(function(x,y){ return x[0]-y[0]; });
   var studied=iv.reduce(function(s,x){ return s+(x[1]-x[0]); },0);
   var sl=sleep[T], wm=sl&&sl.w?hm2m(sl.w):null;
@@ -44,12 +49,15 @@ function neetCore(D, nowMs){
   var breaksS=Math.max(0,Math.round(awakeS-covS));
   var slept=null; if(sl&&sl.w&&sl.b){ slept=(((hm2m(sl.w)-hm2m(sl.b))%1440)+1440)%1440; }
   var run=null, paused=[];
-  for(var id2 in actual){ var a2=actual[id2]; if(!a2||!a2.s||a2.e) continue; var name=id2.replace(/^[^:]*:/,"").trim();
-    if(isPaused(a2)) paused.push(name); else { var pp2=pauses(a2), act=Math.max(0,(nowMs-P(a2.s))/60000-pp2.reduce(function(s,x){ return s+(P(x.t||nowIso)-P(x.f))/60000; },0)); run={name:name,min:Math.round(act),sec:Math.round(act*60)}; } }
+  var free=ext.free||{}; function nm(id){ return free[id]&&free[id].n ? free[id].n : String(id).replace(/^[^:]*:/,"").trim(); }
+  for(var id2 in actual){ var a2=actual[id2]; if(!a2||!a2.s||a2.e) continue; var name=nm(id2);
+    if(isPaused(a2)) paused.push({id:id2,name:name}); else { var pp2=pauses(a2), act=Math.max(0,(nowMs-P(a2.s))/60000-pp2.reduce(function(s,x){ return s+(P(x.t||nowIso)-P(x.f))/60000; },0)); run={id:id2,free:/^x:/.test(id2),name:name,min:Math.round(act),sec:Math.round(act*60)}; } }
   var rb=null; for(var i=brk.length-1;i>=0;i--){ if(!brk[i].e){ rb=brk[i]; break; } }
   var BRK={lunch:["Lunch",45],dinner:["Dinner",45],series:["Series",30],nap:["Short nap",30],other:["Break",30]};
-  var onBrk=rb?{name:rb.k==="other"&&rb.n?rb.n:(BRK[rb.k]||BRK.other)[0],min:Math.round((nowMs-P(rb.s))/60000),sec:Math.round((nowMs-P(rb.s))/1000),max:(BRK[rb.k]||BRK.other)[1]}:null;
-  var doneToday=0; for(var k2 in (ext.dt||{})) if(ext.dt[k2]===T) doneToday++;
-  return {today:T,awake:awake,studied:studied,breaks:breaks,awakeS:awakeS,studiedS:studiedS,breaksS:breaksS,woke:sl&&sl.w||null,slept:slept,sleeping:!!ext.bed,bedAt:ext.bed||null,run:run,paused:paused,onBreak:onBrk,doneToday:doneToday,updatedAt:D.updatedAt||null};
+  var onBrk=rb?{name:rb.k==="other"&&rb.n?rb.n:(BRK[rb.k]||BRK.other)[0],min:Math.round((nowMs-P(rb.s))/60000),sec:Math.round((nowMs-P(rb.s))/1000),max:(BRK[rb.k]||BRK.other)[1],pid:rb.pid||null,pname:rb.pid?nm(rb.pid):null}:null;
+  var doneToday=0; for(var k2 in (ext.dt||{})) if(ext.dt[k2]===T&&!/^x:/.test(k2)) doneToday++;
+  var own=0; for(var k5 in free){ var a5=actual[k5]; if(a5&&a5.s) segs(a5).forEach(function(x){ own+=(x[1]-x[0])/1000; }); }
+  var lastBrkEnd=null; brk.forEach(function(b){ if(b.e&&b.s&&dayOf(b.s)===T){ var e=P(b.e); if(lastBrkEnd==null||e>lastBrkEnd) lastBrkEnd=e; } });
+  return {ivMs:ivMs,sMs:sMs,lastBrkEnd:lastBrkEnd,brkStart:rb?P(rb.s):null,today:T,awake:awake,studied:studied,breaks:breaks,awakeS:awakeS,studiedS:studiedS,breaksS:breaksS,woke:sl&&sl.w||null,slept:slept,sleeping:!!ext.bed,bedAt:ext.bed||null,run:run,paused:paused,ownS:Math.round(own),onBreak:onBrk,doneToday:doneToday,updatedAt:D.updatedAt||null};
 }
 if(typeof module!=="undefined") module.exports=neetCore;
