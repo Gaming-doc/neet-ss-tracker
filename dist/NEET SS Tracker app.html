@@ -675,7 +675,7 @@ function actHTML(id){
     return `<span class="run">${onBrk?`On <b>${esc(brkName(rb))}</b> since <b>${hm(rb.s)}</b>`:pz?`Paused since <b>${hm(p[p.length-1].f)}</b>`:`Started <b>${hm(a.s)}</b>`} · <b class="live" data-id="${esc(id)}">${fmtM(activeM(a))}</b> studied</span>${onBrk?`<button class="ab start" data-act="brkEnd">■ End break &amp; resume</button>`:pz?`<button class="ab start" data-act="r">▶ Resume</button>`:`<button class="ab pause" data-act="p">⏸ Pause</button>${brkSel}`}<button class="ab end" data-act="e">■ End now</button><button class="ab x" data-act="x" aria-label="Clear the times for this module">×</button>${pauseLog(a,id)}`;
   }
   const v=vsPlan(id);
-  return `<span class="did">Did <b>${hm(a.s)}–${hm(a.e)}</b> · ${fmtM(activeM(a))} studied${v?" · "+v:""}</span><button class="ab x" data-act="x" aria-label="Clear the actual times">×</button>${pauseLog(a,id)}`;
+  return `<span class="did">Did <b>${hm(a.s)}–${hm(a.e)}</b> · ${fmtM(activeM(a))} studied${v?" · "+v:""}</span><button class="ab start" data-act="c">▶ Continue</button><button class="ab x" data-act="x" aria-label="Clear the actual times">×</button>${pauseLog(a,id)}`;
 }
 function act(id,what){
   if(what==="brkEnd"){ endBrk(); return; }
@@ -683,13 +683,14 @@ function act(id,what){
   const now=new Date().toISOString(), a=JSON.parse(JSON.stringify(actual[id]||{}));
   const closePause=o=>{ const p=pauses(o).map(x=>Object.assign({},x)); if(p.length && !p[p.length-1].t) p[p.length-1].t=now; o.p=p; };
   const others=fn=>{ for(const k in actual){ const o=actual[k]; if(k!==id && o && o.s && !o.e && !isPaused(o)) actual[k]=fn(JSON.parse(JSON.stringify(o))); } };
-  let endedBrk=null; if(what==="s"||what==="r"){ endedBrk=endRunningBrk(now); }
+  let endedBrk=null; if(what==="s"||what==="r"||what==="c"){ endedBrk=endRunningBrk(now); }
   if(what==="s"){ others(o=>{ o.e=now; return o; }); actual[id]={s:now}; }
   else if(what==="p"){ if(a.s && !a.e && !isPaused(a)){ a.p=pauses(a).concat([{f:now}]); actual[id]=a; } }
   else if(what==="r"){ if(isPaused(a)){ others(o=>{ o.p=pauses(o).concat([{f:now}]); return o; }); closePause(a); actual[id]=a; } }
+  else if(what==="c"){ if(a.s && a.e){ others(o=>{ o.p=pauses(o).concat([{f:now}]); return o; }); a.p=pauses(a).concat([{f:a.e,t:now}]); delete a.e; actual[id]=a; } }
   else if(what==="e"){ if(a.s){ if(isPaused(a)) closePause(a); a.e=now; actual[id]=a; if(!done[id] && !isFree(id)){ done[id]=1; ext.dt[id]=TODAY; } } }
   else { delete actual[id]; if(isFree(id) && ext.free) delete ext.free[id]; }
-  queueSave(); renderAll(); coachEvent(what,id,endedBrk?{brk:endedBrk}:undefined);
+  queueSave(); renderAll(); coachEvent(what==="c"?"r":what,id,endedBrk?{brk:endedBrk}:undefined);
 }
 let nudged={}; try{ nudged=JSON.parse(localStorage.getItem("neetss-nudged")||"{}")||{}; }catch(e){}
 function checkNudge(){

@@ -10,5 +10,6 @@ node -e "const {gasSim}=require('./h.js'); const s=gasSim('../dist/NEET SS Track
 node scen.js sim.html claude.html > scen.out; echo "scenario: $(grep -c ^PASS scen.out) pass, $(grep -c ^FAIL scen.out || true) fail"   # expect 48 pass, 0 fail
 node cmp.js      # tracker page and menu bar core agree on studied / awake / breaks
 node carry.js    # a module paused overnight and resumed today counts today's part today
+node cont.js     # an ended module can be continued
 node own.js | tail -1    # own study (e.g. a Harrison chapter)
 node mb.js > mb.out && grep -c clicked mb.out    # menu bar clicks: pause, resume, lunch, end, sleep, wake
