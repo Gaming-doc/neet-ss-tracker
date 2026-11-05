@@ -22,7 +22,7 @@ function neetAct(D, what, arg, nowMs){
     if(rb.pid&&A[rb.pid]&&isPaused(A[rb.pid])&&!any) closePause(A[rb.pid]); } }
   else if(what==="wake"){ var c=new Date(nowMs+19800000).toISOString().slice(0,10), s=Object.assign({},ext.sleep[c]||{}); s.w=hhmm(nowMs);
     if(ext.bed && nowMs-Date.parse(ext.bed)<20*3600000) s.b=hhmm(Date.parse(ext.bed)); ext.sleep[c]=s; ext.bed=null; }
-  else if(what==="bed"){ for(var k4 in A){ var o=A[k4]; if(o&&o.s&&!o.e){ closePause(o); o.e=now; } } endBrk(); ext.bed=now; }
+  else if(what==="bed"){ for(var k4 in A){ var o=A[k4]; if(running(o)) pauses(o).push({f:now}); } endBrk(); ext.bed=now; }
   else return false;
   D.updatedAt=now;
   return true;

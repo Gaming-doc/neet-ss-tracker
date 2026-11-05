@@ -61,7 +61,7 @@ const it=id=>`.item[data-id="${id}"]`;
  await pg.evaluate(()=>renderAll());
  const bedBtn=await pg.$('#coach .sl-act[data-a="bed"]'); ok(!!bedBtn,'S8 Going to sleep button at 23:30');
  if(bedBtn) await bedBtn.click(); await pg.waitForTimeout(50);
- ok(await ev(()=>!!ext.bed && !Object.values(actual).some(a=>a.s&&!a.e)),'S8 bed ends running modules');
+ ok(await ev(()=>!!ext.bed && !Object.values(actual).some(a=>a.s&&!a.e&&!isPaused(a))),'S8 bed pauses running modules');
  await pg.clock.setSystemTime(new Date(IST('2026-11-03','01:00'))); await pg.clock.fastForward(31000); await pg.waitForTimeout(50);
  ok(await ev(()=>TODAY)==='2026-11-02','S8 01:00 still Nov 2', await ev(()=>TODAY));
  await pg.clock.setSystemTime(new Date(IST('2026-11-03','08:00'))); await pg.clock.fastForward(31000); await pg.waitForTimeout(50);

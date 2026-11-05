@@ -1130,7 +1130,8 @@ function sleepRowHTML(d){
 }
 function bedNow(){
   const now=nowISO();
-  for(const k in actual){ const a=actual[k]; if(a&&a.s&&!a.e){ const o=JSON.parse(JSON.stringify(a)); const p=pauses(o); if(p.length&&!p[p.length-1].t) p[p.length-1].t=now; o.p=p; o.e=now; actual[k]=o; } }
+  // Going to sleep pauses what is running; a module that is not finished stays open and carries over to the next day.
+  for(const k in actual){ const a=actual[k]; if(a&&a.s&&!a.e&&!isPaused(a)) actual[k]=Object.assign(JSON.parse(JSON.stringify(a)),{p:pauses(a).concat([{f:now}])}); }
   endRunningBrk(now); ext.bed=now; queueSave(); renderAll(); coachEvent("bed",null,todayIST());
 }
 function wakeNow(){
